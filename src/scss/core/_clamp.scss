@@ -1,0 +1,6 @@
+@function clamp-calc($size-at-min-width, $size-at-max-width) {
+    $slope: calc(($size-at-max-width - $size-at-min-width) / (1920px - 320px));
+    $y-axis-intersection: -1 * 320px * $slope + $size-at-min-width;
+    $return-value: clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
+    @return $return-value;
+}

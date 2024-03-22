@@ -1,0 +1,15 @@
+.faq {
+    padding: clamp-calc(40px, 60px) 0; 
+
+    &__title {
+        font-size: clamp-calc(26px, 35px);
+        font-weight: 700;
+        margin: 0 0 30px;
+        padding: 0;
+    }
+
+    &__items {
+        display: grid;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,7 @@
+.content-container {
+	width: 100%;
+	max-width: 1920px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 clamp-calc(15px, 50px);
+}

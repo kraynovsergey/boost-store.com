@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+    head
+        block meta
+            - var seotitle = ''
+            - var seodescription = ''
+            - var seokeywords = ''
+        include pug/core/_meta
+    body
+        include pug/core/_mixin
+        div(id="panel")
+        .page
+            //Шапка
+            header.header Шапка
+            
+            //Сайдбар
+            aside.sidebar Сайдбар
+            
+            //Контентная часть (моя)
+            main.main.content
+                block main
+
+            //Подвал
+            footer.footer Подвал

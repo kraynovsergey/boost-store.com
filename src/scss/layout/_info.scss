@@ -1,0 +1,58 @@
+.info {
+    @include tablet-small-from {
+        position: relative;
+    }
+
+    &__btn {
+        width: clamp-calc(20px, 24px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: #001020;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            & + .info__text {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        & svg {
+            width: 10%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 200px;
+        padding: clamp-calc(10px, 15px);
+        background: #fff;
+        border-radius: 5px;
+        color: #14273a;
+        display: grid;
+        gap: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s ease-in-out;
+        z-index: 4;
+
+        & h4 {
+            margin: 0;
+            padding: 0;
+            font-size: clamp-calc(16px, 20px);
+            font-weight: 700;
+        }
+
+        & p {
+            margin: 0;
+            font-size: clamp-calc(12px, 15px);
+        }
+    }
+}

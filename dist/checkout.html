@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <!--Прелоад моих стилей и скриптов-->
+    <link rel="preload" href="css/style.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="js/app.min.js" as="script" fetchpriority="high">
+    <title>Checkout</title>
+    <meta name="description">
+    <meta name="keywords">
+    <!--Чужие стили-->
+    <link href="files/components/main-slider/style.css" type="text/css" rel="stylesheet">
+    <link href="files/components/index-reviews/style.css" type="text/css" rel="stylesheet">
+    <link href="files/css/modals.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="files/css/swiper-bundle.min.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="files/css/style.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <!--Мои стили-->
+    <link rel="stylesheet" href="css/style.min.css">
+    <!--Чужие скрипты-->
+    <script src="files/js/jquery-3.7.1.min.js"></script>
+    <script src="files/js/jquery.cookies.js"></script>
+    <script src="files/js/swiper-bundle.min.js"></script>
+    <script src="files/js/utils.js"></script>
+    <script src="files/js/script.js"></script>
+    <script src="files/components/register-popup/script.js"></script>
+    <script src="files/components/auth/script.js"></script>
+    <script src="files/components/main-slider/script.js"></script>
+    <script src="files/components/index-reviews/script.js"></script>
+    <!--Мои скрипты-->
+    <script src="js/app.min.js" defer></script>
+  </head>
+  <body>
+    <div id="panel"></div>
+    <div class="page">
+      <!--Шапка-->
+      <header class="header">Шапка</header>
+      <!--Сайдбар-->
+      <aside class="sidebar">Сайдбар</aside>
+      <!--Контентная часть (моя)-->
+      <main class="main content">
+        <div class="content-container">
+          <h1 class="content__h1">Checkout</h1>
+          <div class="checkout">
+            <div class="cart">
+              <article class="cart-item">
+                <div class="cart-item__info">
+                      <picture class="cart-item__picture picture">
+                        <source type="image/webp" data-srcset="img/cart/img.webp 1x, img/cart/img@2x.webp 2x"><img class="lazy" data-srcset="img/cart/img.jpg 1x, img/cart/img@2x.jpg 2x" alt="Raise your stats! - Статистика 60% + 1600 РЭ +" width="142" height="100">
+                      </picture>
+                  <div class="cart-item__content">
+                    <h3 class="cart-item__title"> <a class="link _full" href="#">Raise your stats! - Статистика 60% + 1600 РЭ +<span>x1</span></a></h3>
+                    <ul class="cart-item__params list-reset">
+                      <li>+1 Win Extra </li>
+                      <li>Play with booster (Duo/Lobby)</li>
+                      <li>Priority order</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cart-item__price">163.40$</div>
+                <form class="cart-item__remove">
+                  <button class="cart-item__remove-btn btn-reset" type="button">
+                        <svg width="15" height="19">
+                          <use xlink:href="img/icons/icons.svg#remove"></use>
+                        </svg>
+                  </button>
+                </form>
+              </article>
+              <article class="cart-item">
+                <div class="cart-item__info">
+                      <picture class="cart-item__picture picture">
+                        <source type="image/webp" data-srcset="img/cart/img.webp 1x, img/cart/img@2x.webp 2x"><img class="lazy" data-srcset="img/cart/img.jpg 1x, img/cart/img@2x.jpg 2x" alt="Raise your stats! - Статистика 60% + 1600 РЭ +" width="142" height="100">
+                      </picture>
+                  <div class="cart-item__content">
+                    <h3 class="cart-item__title"><a class="link _full" href="#">Raise your stats! - Статистика 60% + 1600 РЭ +<span>x1</span></a></h3>
+                    <ul class="cart-item__params list-reset">
+                      <li>+1 Win Extra </li>
+                      <li>Play with booster (Duo/Lobby)</li>
+                      <li>Priority order</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="cart-item__price">163.40$</div>
+                <form class="cart-item__remove">
+                  <button class="cart-item__remove-btn btn-reset" type="button">
+                        <svg width="15" height="19">
+                          <use xlink:href="img/icons/icons.svg#remove"></use>
+                        </svg>
+                  </button>
+                </form>
+              </article>
+            </div>
+            <div class="checkout__blocks">
+              <section class="checkout__block">
+                <h3 class="checkout__title">How we can contact you?</h3>
+                <p class="checkout__subtitle">Fast registration</p>
+                <form class="checkout__small-form" action="#">
+                  <input class="form__input" type="text" name="fullname">
+                </form>
+              </section>
+              <section class="checkout__block">
+                <h3 class="checkout__title">Or</h3>
+                <p class="checkout__subtitle">Log in or sign up <span>to receive 2.5$</span> for your account</p>
+                <div class="checkout__personal">
+                  <button class="form__submit btn-reset" type="button"> <span>Sign UP</span></button>
+                  <button class="form__submit-bordered btn-reset" type="button"> <span>Log In</span></button>
+                </div>
+              </section>
+              <section class="checkout__block checkout__coupon">
+                <h3 class="checkout__title">Got a coupon?</h3>
+                <p class="checkout__subtitle">Apply it here to get a discount!</p>
+                <form class="checkout__small-form" action="#">
+                  <input class="form__input" type="text" name="fullname">
+                  <button class="form__submit btn-reset" type="submit"> <span>Apply</span></button>
+                </form>
+              </section>
+              <section class="checkout__block checkout__payment">
+                <h3 class="checkout__title">Choose a payment method</h3>
+                    <picture class="checkout__payment-picture picture">
+                      <source type="image/webp" data-srcset="img/checkout/paypal.webp 1x, img/checkout/paypal@2x.webp 2x"><img class="lazy" data-srcset="img/checkout/paypal.png 1x, img/checkout/paypal@2x.png 2x" width="127" height="100">
+                    </picture>
+              </section>
+              <form class="checkout__form">
+                <div class="checkout__block">
+                  <h3 class="checkout__title">Game account information</h3>
+                  <div class="checkout__form-grid">
+                    <fieldset class="form__fieldset">
+                      <label class="form__label" for="checkout-login">Login</label>
+                      <input class="form__input" type="text" name="login" id="checkout-login">
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                      <label class="form__label" for="checkout-password">Password</label>
+                      <input class="form__input" type="password" name="password" id="checkout-password">
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                      <label class="form__label" for="checkout-nickname">Nickname</label>
+                      <!--Стиль поля с атрибутом disabled-->
+                      <input class="form__input" type="text" name="nickname" id="checkout-nickname" disabled>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                      <label class="form__label" for="checkout-game-server">Game server</label>
+                      <!--Стиль поля с ошибкой валидации-->
+                      <input class="form__input _error" type="text" name="game_server" id="checkout-game-server">
+                      <div class="form__error"><span>
+                              <svg width="2" height="11">
+                                <use xlink:href="img/icons/icons.svg#info"></use>
+                              </svg></span>Поле заполнено неверно</div>
+                    </fieldset>
+                    <fieldset class="form__fieldset checkout__form-vehicle-type">
+                      <label class="form__label" for="checkout-vehicle-type">Vehicle type</label>
+                      <input class="form__input" type="text" name="vehicle_type" id="checkout-vehicle-type">
+                    </fieldset>
+                    <fieldset class="form__fieldset checkout__form-textarea">
+                      <label class="form__label" for="checkout-additional-information">Additional information</label>
+                      <textarea class="form__textarea" name="additional_information" id="checkout-additional-information"></textarea>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="checkout__total">
+                  <div class="checkout__total-sum">Total:<span>$1 235.00</span></div>
+                  <div class="checkout__total-bonus"> <span><strong>2.5$</strong> will be credited to your account</span>
+                    <div class="checkout__total-bonus-info">
+                      <button class="checkout__total-bonus-info-btn btn-reset" type="button">
+                            <svg width="2" height="11">
+                              <use xlink:href="img/icons/icons.svg#info"></use>
+                            </svg>
+                      </button>
+                      <div class="personal-info__status-info-text">
+                        <h4>Timofey Gluxov</h4>
+                        <p>I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="checkout__total-submit btn-reset" type="submit"> <span>Processed checkout</span></button>
+                </div>
+                <div class="checkout__checkboxes">
+                  <div class="form__checkbox">
+                    <input class="form__checkbox-input" type="checkbox" name="privacy_policy" id="checkout_privacy_policy">
+                    <label class="form__checkbox-label" for="checkout_privacy_policy"><span class="form__checkbox-check"></span><span class="form__checkbox-text">I have read and accept the <a href="#">Terms of service</a>. I also consent to the site <a href="#">Privacy policy</a> and processing of personal data.</span></label>
+                  </div>
+                  <div class="form__checkbox">
+                    <input class="form__checkbox-input" type="checkbox" name="subscribe" id="checkout_subscribe">
+                    <label class="form__checkbox-label" for="checkout_subscribe"><span class="form__checkbox-check"></span><span class="form__checkbox-text">Yes, I'd like to receive exclusive offers and information on products and services that may be of interest to me by email. Customers can opt-out or unsubscribe at any time.</span></label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--Подвал-->
+      <footer class="footer">Подвал</footer>
+    </div>
+  </body>
+</html>

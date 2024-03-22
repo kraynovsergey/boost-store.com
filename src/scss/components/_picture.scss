@@ -1,0 +1,36 @@
+.picture {
+	display: flex;
+
+	& img {
+		width: 100%;
+		height: auto;
+	}
+
+	&._full {
+		width: 100%;
+	}
+
+	&._cover,
+	&._contain {
+		& img {
+			height: 100%;
+		}
+	}
+
+	&._cover {
+		& img {
+			object-fit: cover;
+		}
+	}
+
+	&._contain {
+		& img {
+			object-fit: contain;
+		}
+	}
+
+	&._radius {
+		border-radius: clamp-calc(7px, 10px);
+		overflow: hidden;
+	}
+}

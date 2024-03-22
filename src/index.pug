@@ -1,0 +1,45 @@
+doctype html
+block html
+html(lang="ru")
+    head
+        block meta
+            - var seotitle = 'Список страниц'
+            - var seodescription = ''
+            - var seokeywords = ''
+
+        include pug/core/_meta
+
+    style(type="text/css").
+        .wrap {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .wrap__list {
+            font-size: 1.2rem;
+            color: #000;
+        }
+
+        .wrap__list li:not(:last-child) {
+            margin-bottom: .8rem;
+        }
+
+        .wrap__list a {
+            color: currentColor;
+            text-decoration: none;
+        }
+
+    body
+        .wrap
+            ol.wrap__list
+                li
+                    a(href="personal.html" target="_blank") Account overview
+                li
+                    a(href="checkout.html" target="_blank") Checkout
+                li
+                    a(href="product.html" target="_blank") Product
+

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    src: url("../vendors/fonts/roboto_300.woff") format("woff");
+    src-src: url("../vendors/fonts/roboto_300.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("../vendors/fonts/RobotoRegular.woff") format("woff");
+    src-src: url("../vendors/fonts/Roboto-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 500;
+    src: url("../vendors/fonts/roboto_500.woff") format("woff");
+    src-src: url("../vendors/fonts/roboto_500.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url("../vendors/fonts/Roboto-Bold.woff") format("woff");
+    src-src: url("../vendors/fonts/Roboto-Bold.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Interphases";
+    font-weight: 300;
+    src: url("../vendors/fonts/TTInterfaces-Regular.woff") format("woff");
+    src-src: url("../vendors/fonts/TTInterfaces-Regular.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Interphases";
+    font-weight: 400;
+    src: url("../vendors/fonts/TTInterfaces-Medium.woff") format("woff");
+    src-src: url("../vendors/fonts/TTInterfaces-Medium.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Interphases";
+    font-weight: 500;
+    src: url("../vendors/fonts/TTInterfaces-SemiBold.woff") format("woff");
+    src-src: url("../vendors/fonts/TTInterfaces-SemiBold.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TT Interphases";
+    font-weight: 700;
+    src: url("../vendors/fonts/TTInterfaces-Bold.woff") format("woff");
+    src-src: url("../vendors/fonts/TTInterfaces-Bold.woff2") format("woff2");
+    font-display: swap;
+}

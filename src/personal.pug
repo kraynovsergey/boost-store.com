@@ -1,0 +1,225 @@
+extends base
+
+block meta
+    - var seotitle = 'Account overview'
+
+block main
+    .content-container
+        h1.content__h1 Account overview
+
+        section.personal-info
+            .personal-info__content
+                .personal-info__avatar
+                    +picture('picture', 'personal/avatar', 'jpg', '198', '198', 'Timofey Gluxov')
+                    form.personal-info__avatar-change(action="#")
+                        input(type="file" name="avatar" id="personal-avatar")
+                        label.personal-info__control(for="personal-avatar") Change avatar
+
+                .personal-info__info
+                    .personal-info__header
+                        h2.personal-info__fullname Timofey Gluxov
+                    
+                        .personal-info__controls
+                            button.personal-info__control.btn-reset(type="button") Edit information
+                            button.personal-info__control.btn-reset(type="button") Change password
+                            label.personal-info__control.btn-reset._mobile(type="button" for="personal-avatar") Change avatar
+
+                    section.personal-info__status
+                        .personal-info__status-header
+                            h3.personal-info__status-title Account status
+                            .personal-info__status-status General (325 usd to Admiral)
+                            .personal-info__status-info
+                                button.personal-info__status-info-icon
+                                    +sprite('', 16, 17, 'info')
+                                .personal-info__status-info-text
+                                    h4 Timofey Gluxov
+                                    p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+                        .personal-info__status-bar
+                            .personal-info__status-bar-line
+                                .personal-info__status-bar-line-current(style="width: 40%;")
+                            .personal-info__status-bar-tags
+                                span General
+                                span Admiral
+
+                    .personal-info__params
+                        .personal-info__param
+                            .personal-info__param-title Your mail
+                            a.personal-info__param-value(href="mailto:tim.tim.glusxov@mail.ru") tim.tim.glusxov@mail.ru
+
+                        .personal-info__param
+                            .personal-info__param-title Skype
+                            a.personal-info__param-value(href="skype:Gluxovteam?chat") Gluxovteam
+
+                        .personal-info__param
+                            .personal-info__param-title Phone number
+                            a.personal-info__param-value(href="tel:+79999999999") +7 999 999 99 99
+
+                        .personal-info__param
+                            .personal-info__param-title Discord
+                            a.personal-info__param-value(href="https://discord.com/users/id" target="_blank" rel="nofollow") Gluxovteam#5127
+
+                        .personal-info__param
+                            .personal-info__param-title You can link your account to
+                            .personal-info__socials
+                                a.personal-info__social._vk(href="#")
+                                    +sprite('', 40, 40, 'vk')
+                                a.personal-info__social._discord(href="#")
+                                    +sprite('', 40, 40, 'discord')
+                                a.personal-info__social._facebook(href="#")
+                                    +sprite('', 40, 40, 'facebook')
+                                a.personal-info__social._google(href="#")
+                                    +sprite('', 40, 40, 'google')
+
+                        .personal-info__param
+                            .personal-info__param-title Your linked accounts
+                            .personal-info__socials
+                                a.personal-info__unlinked(href="#")
+                                    +sprite('personal-info__unlinked-icon _google', 24, 24, 'google')
+                                    span Павел поляков
+                                    +sprite('personal-info__unlinked-close', 12, 12, 'close')
+
+            .personal-info__balances
+                section.personal-info__balance._discount
+                    +sprite('personal-info__balance-icon', 68, 68, 'discount')
+                    .personal-info__balance-content
+                        h4.personal-info__balance-title Personal discount
+                        .personal-info__balance-value 15%
+
+                .personal-info__balance._balance
+                    +sprite('personal-info__balance-icon', 68, 68, 'balance')
+                    .personal-info__balance-content
+                        h4.personal-info__balance-title Cashback balance
+                        .personal-info__balance-value 234.00 <span>USD</span>
+
+    section.last-orders
+        .content-container.last-orders__container
+            .last-orders__header
+                h2.last-orders__title Last orders
+
+                .last-orders__filters.scrollbar-hidden
+                    button.last-orders__filter.btn-reset._active(type="button" data-last-orders-filter="0") All <span></span>
+                    button.last-orders__filter.btn-reset(type="button" data-last-orders-filter="1") Not paid <span></span>
+                    button.last-orders__filter.btn-reset(type="button" data-last-orders-filter="2") In process <span></span>
+                    button.last-orders__filter.btn-reset(type="button" data-last-orders-filter="3") Finished <span></span>
+
+            .last-orders__items
+                article.last-order(data-last-orders-item="2")
+                    .last-order__info
+                        +picture('last-order__picture picture', 'last-order/img', 'jpg', 121, 85, 'Farming silver on premium tanks')
+                        h3.last-order__title 
+                            a.link._full(href="#") Farming silver on premium tanks
+                                span x1
+                        ul.last-order__params.list-reset
+                            li +1 Win Extra 
+                            li Play with booster (Duo/Lobby)
+                            li Priority order
+
+                    .last-order__status
+                        .last-order__status-header Order status
+                            ul.last-order__status-list.list-reset
+                                li Start day: 01.01.2021
+                                li Update day: 04.01.2021
+                        .last-order__status-line
+                            .last-order__status-line-current._blue(style="width: 35%")
+                                span 35%
+
+
+                    .last-order__payment 163.40$
+
+                article.last-order(data-last-orders-item="3")
+                    .last-order__info
+                        +picture('last-order__picture picture', 'last-order/img', 'jpg', 121, 85, 'Farming silver on premium tanks')
+                        h3.last-order__title
+                            a.link._full(href="#") Farming silver on premium tanks
+                                span x1
+                        ul.last-order__params.list-reset
+                            li +1 Win Extra 
+                            li Play with booster (Duo/Lobby)
+                            li Priority order
+
+                    .last-order__status
+                        .last-order__status-header Order status
+                            ul.last-order__status-list.list-reset
+                                li Start day: 01.01.2021
+                                li Update day: 04.01.2021
+                        .last-order__status-line
+                            .last-order__status-line-current._green(style="width: 100%")
+                                span 100%
+
+
+                    .last-order__payment 1534.99$
+                        button.last-order__btn.last-order__review.btn-reset(type="button")
+                            +sprite('', 20, 18, 'like')
+                            span Write a review
+
+                article.last-order(data-last-orders-item="1")
+                    .last-order__info
+                        +picture('last-order__picture picture', 'last-order/img', 'jpg', 121, 85, 'Farming silver on premium tanks')
+                        h3.last-order__title
+                            a.link._full(href="#") Farming silver on premium tanks
+                                span x1
+                        ul.last-order__params.list-reset
+                            li +1 Win Extra 
+                            li Play with booster (Duo/Lobby)
+                            li Priority order
+
+                    .last-order__status
+                        .last-order__status-header Order status
+                            ul.last-order__status-list.list-reset
+                                li Start day: 01.01.2021
+                        .last-order__status-line
+                            .last-order__status-line-current._green(style="width: 0%")
+                                span 0%
+
+
+                    .last-order__payment 19.00$
+                        a.last-order__btn.last-order__paypal.btn-reset(href="#")
+                            +picture('picture', 'last-order/paypal', 'png', 112, 28, 'PayPal')
+
+                article.last-order(data-last-orders-item="3")
+                    .last-order__info
+                        +picture('last-order__picture picture', 'last-order/img', 'jpg', 121, 85, 'Farming silver on premium tanks')
+                        h3.last-order__title
+                            a.link._full(href="#") Farming silver on premium tanks
+                                span x1
+                        ul.last-order__params.list-reset
+                            li +1 Win Extra 
+                            li Play with booster (Duo/Lobby)
+                            li Priority order
+
+                    .last-order__status
+                        .last-order__status-header Order status
+                            ul.last-order__status-list.list-reset
+                                li Start day: 01.01.2021
+                                li Update day: 04.01.2021
+                        .last-order__status-line
+                            .last-order__status-line-current._green(style="width: 100%")
+                                span 100%
+
+
+                    .last-order__payment 1534.99$
+
+                article.last-order(data-last-orders-item="3")
+                    .last-order__info
+                        +picture('last-order__picture picture', 'last-order/img', 'jpg', 121, 85, 'Farming silver on premium tanks')
+                        h3.last-order__title
+                            a.link._full(href="#") Farming silver on premium tanks
+                                span x1
+                        ul.last-order__params.list-reset
+                            li +1 Win Extra 
+                            li Play with booster (Duo/Lobby)
+                            li Priority order
+
+                    .last-order__status
+                        .last-order__status-header Order status
+                            ul.last-order__status-list.list-reset
+                                li Start day: 01.01.2021
+                                li Update day: 04.01.2021
+                        .last-order__status-line
+                            .last-order__status-line-current._green(style="width: 100%")
+                                span 100%
+
+
+                    .last-order__payment 1534.99$
+                            
+

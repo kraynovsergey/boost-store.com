@@ -1,0 +1,282 @@
+.checkout {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-calc(40px, 50px);
+    margin-bottom: clamp-calc(50px, 110px);
+
+    @include mobile-from {
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 7px;
+        background: #19598d;
+    }
+
+    &__blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    &__block {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: clamp-calc(15px, 30px);
+        display: flex;
+        flex-direction: column;
+        gap: clamp-calc(15px, 20px);
+    }
+
+    &__title {
+        font-size: clamp-calc(20px, 28px);
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+
+        & span {
+            color: #ec5400;
+            font-weight: 700;
+        }
+    }
+
+    &__small-form {
+        display: flex;
+        gap: clamp-calc(15px, 20px);
+    }
+
+    &__personal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp-calc(15px, 20px);
+    }
+
+    &__coupon {
+        @include tablet {
+            grid-column: span 2;
+        }
+
+        @include mobile {
+            grid-column: span 1 !important;
+        }
+    }
+
+    &__payment {
+        grid-column: span 3;
+        flex-direction: row;
+        gap: clamp-calc(20px, 50px);
+        align-items: center;
+
+        @include tablet {
+            grid-column: span 2;
+        }
+
+        @include mobile {
+            grid-column: span 1 !important;
+        }
+
+        &-picture {
+            cursor: pointer;
+            width: clamp-calc(105px, 127px);
+        }
+    }
+
+    &__form {
+        grid-column: span 3;
+        display: flex;
+        flex-direction: column;
+        gap: clamp-calc(40px, 50px);
+
+        @include tablet {
+            grid-column: span 2;
+        }
+
+        @include mobile {
+            grid-column: span 1 !important;
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: .5fr .5fr 1fr;
+            gap: 20px clamp-calc(20px, 40px);
+
+            @include tablet-small {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include mobile {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        &-vehicle-type {
+            @include mobile-from {
+                grid-column: span 2;
+            }
+        }
+
+        &-textarea {
+            @include tablet-small-from {
+                grid-row: 1 / span 3;
+                grid-column: 3;
+            }
+
+            @include mobile-from {
+                grid-column: span 2;
+            }
+
+            & textarea {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    &__total {
+        border-radius: 5px;
+        background: linear-gradient(180deg, #001020 0%, #053a70 100%);
+        box-shadow: -20px 20px 40px 0 rgba(48, 204, 255, 0.3);
+        padding: clamp-calc(15px, 50px);
+        display: grid;
+        gap: clamp-calc(10px, 20px);
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-between;
+        align-items: center;
+
+        @include desktop-small {
+            grid-template-columns: .6fr .4fr;
+        }
+
+        @include tablet-small {
+            grid-template-columns: 1fr;
+        }
+
+        &-sum {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+
+            & span {
+                font-size: clamp-calc(30px, 48px);
+                font-weight: 700;
+            }
+        }
+
+        &-bonus {
+            font-size: clamp-calc(15px, 18px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            @include desktop-small {
+                grid-row: 2;
+            }
+    
+            & strong {
+                font-weight: 700;
+                color: #ec5400;
+            }
+
+            &-info {
+                position: relative;
+
+                &-btn {
+                    min-width: 24px;
+                    max-width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background: #001020;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+
+                    &:hover {
+                        & + .personal-info__status-info-text {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-submit {
+            height: 60px;
+            border-radius: 5px;
+            padding: 0 clamp-calc(25px, 60px);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 18px;
+            white-space: nowrap;
+
+            @include desktop-small {
+                grid-row: span 2;
+                grid-column: 2;
+            }
+
+            @include tablet-small {
+                grid-row: 3 / span 1;
+                grid-column: 1;
+            }
+
+            & span {
+                z-index: 1;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                z-index: 0;
+                transition: .5s ease-in-out;
+            }
+
+            &::before {
+                background: linear-gradient(180deg, #045fa9 0%, #004781 100%, #004781 100%);
+            }
+
+            &::after {
+                background: linear-gradient(180deg, #30caff 0%, #329bf8 54.17%, #3373f2 100%);
+                opacity: 0;
+            }
+
+            &:hover {
+                @include tablet-from {
+                    &::before {
+                        opacity: 0;
+                    }
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__checkboxes {
+        display: grid;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,242 @@
+mixin sprite(classname, width, height, id)
+    svg(class=classname width=width height=height)
+        use(xlink:href="@img/icons/icons.svg#"+id)
+
+mixin picture(classname, img, format, width, height, alt, aos)
+    picture(class=classname data-aos=aos)
+        source(type="image/webp" data-srcset="@img/"+img+".webp 1x, @img/"+img+"@2x.webp 2x")
+        img.lazy(data-srcset="@img/"+img+"."+format+" 1x, @img/"+img+"@2x."+format+" 2x" alt=alt width=width height=height)
+
+mixin picture_no_lazy(classname, img, format, width, height, alt, aos)
+    picture(class=classname data-aos=aos)
+        source(type="image/webp" srcset="@img/"+img+".webp 1x, @img/"+img+"@2x.webp 2x")
+        img(srcset="@img/"+img+"."+format+" 1x, @img/"+img+"@2x."+format+" 2x" alt=alt width=width height=height)
+
+mixin info(classname, title, text)
+    .info(class=classname)
+        button.info__btn.btn-reset(type="button")
+            +sprite('', 2, 11, 'info')
+        .info__text
+            h4=title
+            p=text
+
+mixin condition(tank, model, title)
+    .calculator__condition
+        .calculator__condition-checkbox
+            input.calculator__condition-checkbox-input(type="checkbox" name="condition_"+tank+"_"+model id="condition_"+tank+"_"+model)
+            label.calculator__condition-checkbox-label(for="condition_"+tank+"_"+model)
+                span.calculator__condition-checkbox-label-check.option__check
+                span.calculator__condition-checkbox-label-title.option__title=title
+                span.calculator__condition-checkbox-label-money.label +1$
+                +info('calculator__condition-checkbox-label-info', 'Timofey Gluxov', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                    
+        .calculator__condition-switch
+            input.calculator__condition-switch-input(type="checkbox" name="condition_"+tank+"_"+model+"_option" id="condition_"+tank+"_"+model+"_option")
+            label.calculator__condition-switch-label(for="condition_"+tank+"_"+model+"_option")
+                span.calculator__condition-switch-label-check
+                span.calculator__condition-switch-label-title With honors <strong>+1$</strong>
+
+mixin choose(classname, i, title, name)
+    .calculator__choose(class=classname data-calculator-choose=i)
+        .calculator__block
+            h3.calculator__block-title=title
+            .calculator__subbtns
+                button.calculator__subbtn.btn-reset._active(type="button" data-calculator-subbtn="1")
+                    +picture('picture', 'calculator/lt', 'png', 19, 20)
+                    span LT
+
+                button.calculator__subbtn.btn-reset(type="button" data-calculator-subbtn="2")
+                    +picture('picture', 'calculator/mt', 'png', 19, 20)
+                    span MT
+
+                button.calculator__subbtn.btn-reset(type="button" data-calculator-subbtn="3")
+                    +picture('picture', 'calculator/ht', 'png', 19, 20)
+                    span HT
+
+                button.calculator__subbtn.btn-reset(type="button" data-calculator-subbtn="4")
+                    +picture('picture', 'calculator/td', 'png', 19, 20)
+                    span TD
+
+                button.calculator__subbtn.btn-reset(type="button" data-calculator-subbtn="5")
+                    +picture('picture', 'calculator/spg', 'png', 19, 20)
+                    span SPG
+
+        .calculator__block.calculator__subchoose._active(data-calculator-subchoose="1")
+            h3.calculator__block-title Conditions LT   
+            .calculator__conditions
+                +condition(name, 'lt1', 'LT1')
+                +condition(name, 'lt2', 'LT2')
+                +condition(name, 'lt3', 'LT3')
+                +condition(name, 'lt4', 'LT4')
+                +condition(name, 'lt5', 'LT5')
+                +condition(name, 'lt6', 'LT6')
+                +condition(name, 'lt7', 'LT7')
+                +condition(name, 'lt8', 'LT8')
+                +condition(name, 'lt9', 'LT9')
+                +condition(name, 'lt10', 'LT10')
+                +condition(name, 'lt11', 'LT11')
+                +condition(name, 'lt12', 'LT12')
+                +condition(name, 'lt13', 'LT13')
+                +condition(name, 'lt14', 'LT14')
+                +condition(name, 'lt15', 'LT15')
+                .calculator__condition._all
+                    .calculator__condition-checkbox
+                        input.calculator__condition-checkbox-input._all(type="checkbox" name="condition_"+name+"_lt_all" id="condition_"+name+"_lt_all")
+                        label.calculator__condition-checkbox-label._all(for="condition_"+name+"_lt_all")
+                            span.calculator__condition-checkbox-label-check.option__check._all
+                            span.calculator__condition-checkbox-label-wrap-title
+                                span.calculator__condition-checkbox-label-title.option__title All
+                                span.calculator__condition-checkbox-label-money.label._all +37.6$
+                                span.calculator__condition-checkbox-label-old-price 59.9$
+                                span.calculator__condition-checkbox-label-discount -20%
+                            +info('calculator__condition-checkbox-label-info _all', 'Timofey Gluxov', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                                
+                    .calculator__condition-switch
+                        input.calculator__condition-switch-input._all(type="checkbox" name="condition_"+name+"_lt_all_option" id="condition_"+name+"_lt_all_option")
+                        label.calculator__condition-switch-label._all(for="condition_"+name+"_lt_all_option")
+                            span.calculator__condition-switch-label-check
+                            span.calculator__condition-switch-label-title With honors <strong>+36,4$</strong>
+
+        .calculator__block.calculator__subchoose(data-calculator-subchoose="2")
+            h3.calculator__block-title Conditions MT
+            .calculator__conditions
+                +condition(name, 'mt1', 'MT1')
+                +condition(name, 'mt2', 'MT2')
+                +condition(name, 'mt3', 'MT3')
+                +condition(name, 'mt4', 'MT4')
+                +condition(name, 'mt5', 'MT5')
+                +condition(name, 'mt6', 'MT6')
+                +condition(name, 'mt7', 'MT7')
+                +condition(name, 'mt8', 'MT8')
+                +condition(name, 'mt9', 'MT9')
+                +condition(name, 'mt10', 'MT10')
+                +condition(name, 'mt11', 'MT11')
+                +condition(name, 'mt12', 'MT12')
+                +condition(name, 'mt13', 'MT13')
+                +condition(name, 'mt14', 'MT14')
+                +condition(name, 'mt15', 'MT15')
+                .calculator__condition._all
+                    .calculator__condition-checkbox
+                        input.calculator__condition-checkbox-input._all(type="checkbox" name="condition_"+name+"_mt_all" id="condition_"+name+"_mt_all")
+                        label.calculator__condition-checkbox-label._all(for="condition_"+name+"_mt_all")
+                            span.calculator__condition-checkbox-label-check.option__check._all
+                            span.calculator__condition-checkbox-label-wrap-title
+                                span.calculator__condition-checkbox-label-title.option__title All
+                                span.calculator__condition-checkbox-label-money.label._all +37.6$
+                                span.calculator__condition-checkbox-label-old-price 59.9$
+                                span.calculator__condition-checkbox-label-discount -20%
+                            +info('calculator__condition-checkbox-label-info _all', 'Timofey Gluxov', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                                
+                    .calculator__condition-switch
+                        input.calculator__condition-switch-input._all(type="checkbox" name="condition_"+name+"_mt_all_option" id="condition_"+name+"_mt_all_option")
+                        label.calculator__condition-switch-label._all(for="condition_"+name+"_mt_all_option")
+                            span.calculator__condition-switch-label-check
+                            span.calculator__condition-switch-label-title With honors <strong>+36,4$</strong>
+
+        .calculator__block.calculator__subchoose(data-calculator-subchoose="3")
+            h3.calculator__block-title Conditions HT
+            .calculator__conditions
+                +condition(name, 'ht1', 'HT1')
+                +condition(name, 'ht2', 'HT2')
+                +condition(name, 'ht3', 'HT3')
+                +condition(name, 'ht4', 'HT4')
+                +condition(name, 'ht5', 'HT5')
+                +condition(name, 'ht6', 'HT6')
+                +condition(name, 'ht7', 'HT7')
+                +condition(name, 'ht8', 'HT8')
+                +condition(name, 'ht9', 'HT9')
+                +condition(name, 'ht10', 'HT10')
+                +condition(name, 'ht11', 'HT11')
+                +condition(name, 'ht12', 'HT12')
+                +condition(name, 'ht13', 'HT13')
+                +condition(name, 'ht14', 'HT14')
+                +condition(name, 'ht15', 'HT15')
+                .calculator__condition._all
+                    .calculator__condition-checkbox
+                        input.calculator__condition-checkbox-input._all(type="checkbox" name="condition_"+name+"_ht_all" id="condition_"+name+"_ht_all")
+                        label.calculator__condition-checkbox-label._all(for="condition_"+name+"_ht_all")
+                            span.calculator__condition-checkbox-label-check.option__check._all
+                            span.calculator__condition-checkbox-label-wrap-title
+                                span.calculator__condition-checkbox-label-title.option__title All
+                                span.calculator__condition-checkbox-label-money.label._all +37.6$
+                                span.calculator__condition-checkbox-label-old-price 59.9$
+                                span.calculator__condition-checkbox-label-discount -20%
+                            +info('calculator__condition-checkbox-label-info _all', 'Timofey Gluxov', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                                
+                    .calculator__condition-switch
+                        input.calculator__condition-switch-input._all(type="checkbox" name="condition_"+name+"_ht_all_option" id="condition_"+name+"_ht_all_option")
+                        label.calculator__condition-switch-label._all(for="condition_"+name+"_ht_all_option")
+                            span.calculator__condition-switch-label-check
+                            span.calculator__condition-switch-label-title With honors <strong>+36,4$</strong>
+
+        .calculator__block.calculator__subchoose(data-calculator-subchoose="4")
+            h3.calculator__block-title Conditions TD
+            .calculator__conditions
+                +condition(name, 'td1', 'TD1')
+                +condition(name, 'td2', 'TD2')
+                +condition(name, 'td3', 'TD3')
+                +condition(name, 'td4', 'TD4')
+                +condition(name, 'td5', 'TD5')
+                +condition(name, 'td6', 'TD6')
+                +condition(name, 'td7', 'TD7')
+                +condition(name, 'td8', 'TD8')
+                +condition(name, 'td9', 'TD9')
+                +condition(name, 'td10', 'TD10')
+                +condition(name, 'td11', 'TD11')
+                +condition(name, 'td12', 'TD12')
+                +condition(name, 'td13', 'TD13')
+                +condition(name, 'td14', 'TD14')
+                +condition(name, 'td15', 'TD15')
+                .calculator__condition._all
+                    .calculator__condition-checkbox
+                        input.calculator__condition-checkbox-input._all(type="checkbox" name="condition_"+name+"_td_all" id="condition_"+name+"_td_all")
+                        label.calculator__condition-checkbox-label._all(for="condition_"+name+"_td_all")
+                            span.calculator__condition-checkbox-label-check.option__check._all
+                            span.calculator__condition-checkbox-label-wrap-title
+                                span.calculator__condition-checkbox-label-title.option__title All
+                                span.calculator__condition-checkbox-label-money.label._all +37.6$
+                                span.calculator__condition-checkbox-label-old-price 59.9$
+                                span.calculator__condition-checkbox-label-discount -20%
+                            +info('calculator__condition-checkbox-label-info _all', 'Timofey Gluxov', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                                
+                    .calculator__condition-switch
+                        input.calculator__condition-switch-input._all(type="checkbox" name="condition_"+name+"_td_all_option" id="condition_"+name+"_td_all_option")
+                        label.calculator__condition-switch-label._all(for="condition_"+name+"_td_all_option")
+                            span.calculator__condition-switch-label-check
+                            span.calculator__condition-switch-label-title With honors <strong>+36,4$</strong>
+        
+        .calculator__block.calculator__subchoose(data-calculator-subchoose="5")
+            h3.calculator__block-title Conditions SPG
+            .calculator__conditions
+                +condition(name, 'spg1', 'SPG1')
+                +condition(name, 'spg2', 'SPG2')
+                +condition(name, 'spg3', 'SPG3')
+                +condition(name, 'spg4', 'SPG4')
+                +condition(name, 'spg5', 'SPG5')
+                +condition(name, 'spg6', 'SPG6')
+                +condition(name, 'spg7', 'SPG7')
+                +condition(name, 'spg8', 'SPG8')
+                +condition(name, 'spg9', 'SPG9')
+                +condition(name, 'spg10', 'SPG10')
+                +condition(name, 'spg11', 'SPG11')
+                +condition(name, 'spg12', 'SPG12')
+                +condition(name, 'spg13', 'SPG13')
+                +condition(name, 'spg14', 'SPG14')
+                +condition(name, 'spg15', 'SPG15')
+                .calculator__condition._all
+                    .calculator__condition-checkbox
+                        input.calculator__condition-checkbox-input._all(type="checkbox" name="condition_"+name+"_spg_all" id="condition_"+name+"_spg_all")
+                        label.calculator__condition-checkbox-label._all(for="condition_"+name+"_spg_all")
+                            span.calculator__condition-checkbox-label-check.option__check._all
+                            span.calculator__condition-checkbox-label-wrap-title
+                                span.calculator__condition-checkbox-label-title.option__title All
+                                span.calculator__condition-checkbox-label-money.label._all +37.6$
+                                span.calculator__condition-checkbox-label-old-price 59.9$
+                                span.calculator__condition-checkbox-label-discount -20%
+                            +info('calculator__condition-checkbox-label-info _all', 'Timofey Gluxov', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                                
+                    .calculator__condition-switch
+                        input.calculator__condition-switch-input._all(type="checkbox" name="condition_"+name+"_spg_all_option" id="condition_"+name+"_spg_all_option")
+                        label.calculator__condition-switch-label._all(for="condition_"+name+"_spg_all_option")
+                            span.calculator__condition-switch-label-check
+                            span.calculator__condition-switch-label-title With honors <strong>+36,4$</strong>

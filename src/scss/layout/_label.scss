@@ -1,0 +1,12 @@
+.label {
+    height: clamp-calc(16px, 18px);
+    border-radius: 3px;
+    background: linear-gradient(180deg, #a42502 0%, #ec5400 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: clamp-calc(12px, 14px);
+    font-weight: 700;
+    padding: 0 5px;
+}

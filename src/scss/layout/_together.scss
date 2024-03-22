@@ -1,0 +1,61 @@
+.together {
+    padding: 50px 0;
+    background: #001020;
+
+    &__header {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+        font-size: clamp-calc(26px, 35px);
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: .5s ease-in-out;
+        color: #b6c5d0;
+        font-size: 14px;
+
+        @include mobile {
+            display: none;
+        }
+
+        &:hover {
+            @include tablet-from {
+                color: #fff;
+            }
+        }
+
+        &._mobile {
+            display: none;
+
+            @include mobile {
+                display: flex;
+            }
+        }
+    }
+
+    &__wrap-more {
+        display: none;
+        justify-content: center;
+        margin-top: 30px;
+
+        @include mobile {
+            display: flex;
+        }
+    }
+
+    & .swiper-slide {
+        height: auto;
+    }
+}

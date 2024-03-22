@@ -1,0 +1,128 @@
+.product-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp-calc(30px, 40px) clamp-calc(30px, 60px);
+    padding-bottom: clamp-calc(40px, 80px);
+    align-items: flex-start;
+    grid-template-rows: auto 1fr;
+
+    @include tablet-small {
+        grid-template-columns: 1fr;
+    }
+
+    &__header {
+        display: grid;
+        gap: 10px;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        
+        @include tablet-small {
+            position: relative;
+        }
+    }
+
+    &__tag {
+        @include tablet-small-from {
+            position: relative;
+        }
+
+        &-btn {
+            height: 34px;
+            border-radius: 3px;
+            background: #001020;
+            padding: 0 10px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 19px 1fr;
+            gap: 5px;
+            font-size: clamp-calc(14px, 15px);
+            color: #fff;
+            transition: .5s ease-in-out;
+            white-space: nowrap;
+
+            &:hover {
+                background: #3373f2;
+
+                & + .info__text {
+                    visibility: visible ;
+                    opacity: 1;
+                }
+            }
+
+            & svg {
+                height: auto;
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        gap: clamp-calc(50px, 60px);
+
+        &-block {
+            display: grid;
+            gap: clamp-calc(20px, 30px);
+            font-size: clamp-calc(16px, 18px);
+
+            & h2 {
+                font-size: clamp-calc(26px, 35px);
+                font-weight: 700;
+            }
+
+            & * {
+                margin: 0;
+                padding: 0;
+                line-height: 130%;
+            }
+
+            & strong {
+                &._red {
+                    color: #EC5400;
+                }
+
+                &._blue {
+                    color: #30caff;
+                }
+            }
+
+            & ul {
+                margin-left: 30px;
+                display: grid;
+                gap: 15px;
+
+                & li {
+                    display: grid;
+                    grid-template-columns: 18px 1fr;
+                    align-items: center;
+                    gap: 20px;
+
+                    &::before {
+                        content: '';
+                        aspect-ratio: 1 / 1;
+                        background: #dd5813;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__calculator {
+        grid-row: 1 / span 2;
+        grid-column: 2;
+
+        @include tablet-small {
+            grid-row: 2;
+            grid-column: 1;
+        }
+    }
+}

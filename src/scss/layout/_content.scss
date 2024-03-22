@@ -1,0 +1,10 @@
+.content {
+    padding: clamp-calc(26px, 50px) 0 0;
+
+    &__h1 {
+        font-size: clamp-calc(30px, 48px);
+        font-weight: 700;
+        margin: 0 0 20px;
+        padding: 0;
+    }
+}

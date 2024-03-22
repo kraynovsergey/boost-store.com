@@ -1,0 +1,334 @@
+extends base
+
+block meta
+    - var seotitle = 'Personal missions 1.0'
+
+block main
+    .content-container
+        section.product-page
+            .product-page__header
+                h1.content__h1.product-page__title Personal missions 1.0
+                .product-page__tags
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'ssl')
+                            | SSL защита
+                        .info__text
+                            h4 SSL защита
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'vpn')
+                            | VPN
+                        .info__text
+                            h4 VPN
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'guard')
+                            | Безопасно
+                        .info__text
+                            h4 Безопасно
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'support')
+                            | Поддержка 24/7
+                        .info__text
+                            h4 Поддержка 24/7
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'money')
+                            | Возврат денег
+                        .info__text
+                            h4 Возврат денег
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+            .product-page__content
+                +picture_no_lazy('product-page__content-picture picture', 'product/img', 'png', 695, 450, 'Personal missions 1.0')
+                
+                section.product-page__content-block
+                    h2 The includes:
+                    p Buy WoT Azure Pegasus Event boost and participate in one of <strong class="_red">the most difficult events in the history of the game, reaching Legend</strong> Rank!  Unlock unique event-only rewards, badges, dog-tags, and rarest camouflages for your tank.
+
+                section.product-page__content-block
+                    h2 What you will get
+                    ul
+                        li 
+                            span <strong class="_blue">Legend Azure Pegasus rank reached</strong>
+                        li 
+                            span Various rewards from previous ranks obtained;
+                        li 
+                            span Heavenly Horse 2D Style for your tank on Legend rank, if the rank is kept until the end of the season;
+                        li 
+                            span Days of premium account, bonds, and other additional prizes.
+
+                section.product-page__content-block
+                    h2 Execution speed
+                    p Depending on what execution speed you choose, service can be completed faster.
+                    ul 
+                        li 
+                            span <strong>Normal</strong> - you get a basic place in an Azure Pegasus boost completion queue;
+                        li 
+                            span <strong>Express</strong> - your order receives a higher priority, decreasing completion time by 30%;
+                        li 
+                            span <strong>Extra Express</strong> - your order gets the highest priority, making completion time as quick as possible.
+
+            .product-page__calculator.calculator
+                .calculator__header
+                    button.calculator__header-btn.btn-reset._active(type="button" data-calculator-header-btn="1")
+                        +picture('picture', 'calculator/img-1', 'png', 104, 70, 'STUG IV')
+                        span STUG IV
+                    button.calculator__header-btn.btn-reset(type="button" data-calculator-header-btn="2")
+                        +picture('picture', 'calculator/img-2', 'png', 104, 70, 'T28 Concept')
+                        span T28 Concept
+                    button.calculator__header-btn.btn-reset(type="button" data-calculator-header-btn="3")
+                        +picture('picture', 'calculator/img-3', 'png', 104, 70, 'T-55A')
+                        span T-55A
+                    button.calculator__header-btn.btn-reset(type="button" data-calculator-header-btn="4")
+                        +picture('picture', 'calculator/img-4', 'png', 104, 70, 'Object 260')
+                        span Object 260
+
+                .calculator__content
+                    +choose('_active', 1, 'Model STUG IV', 'stug_iv')
+                    +choose('', 2, 'Model T28 Concept', 't28_concept')
+                    +choose('', 3, 'Model T-55A', 't_55a')
+                    +choose('', 4, 'Model Object 260', 'object_260')
+
+                    .calculator__extra
+                        h3.calculator__extra-title Extra Options
+                        .calculator__extra-items
+                            .option
+                                input.option__input(type="checkbox" name="extra_option1" id="extra_option1")
+                                label.option__label(for="extra_option1")
+                                    span.option__check
+                                    span.option__title Play with booster (Duo/Lobby)
+
+                            .option
+                                input.option__input(type="checkbox" name="extra_option2" id="extra_option2")
+                                label.option__label(for="extra_option2")
+                                    span.option__check
+                                    span.option__title +1 Win Extra
+                                    +info('option__info', '+1 Win Extra', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+
+                            .option
+                                input.option__input(type="checkbox" name="extra_option3" id="extra_option3")
+                                label.option__label(for="extra_option3")
+                                    span.option__check
+                                    span.option__title Priority order
+                                    span.label +15%
+
+                            .option
+                                input.option__input(type="checkbox" name="extra_option4" id="extra_option4")
+                                label.option__label(for="extra_option4")
+                                    span.option__check
+                                    span.option__title Live stream
+                                    span.label +5%
+                                    +info('option__info', 'Live stream', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+
+                .calculator-footer
+                    .calculator-footer__total
+                        .calculator-footer__sum $1 235.00
+                        .calculator-footer__bonus Bonus: + 2,5$
+                            +info('calculator-footer__info', 'Bonus', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                        .calculator-footer__deadline
+                            +sprite('', 19, 19, 'clock')
+                            | Deadline: 30 days
+
+                    .calculator-footer__controls
+                        button.calculator-footer__buy.form__submit-red.btn-reset(type="button") 
+                            span Buy it now
+                        button.calculator-footer__add.form__submit-bordered.btn-reset(type="button") 
+                            span Add to basket
+
+    section.gallery
+        .content-container
+            h2.gallery__title Screenshots and videos
+        .gallery__wrapper
+            .swiper(data-swiper-gallery)
+                .swiper-wrapper
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                    .swiper-slide
+                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+
+            .gallery__thumbs
+                button.swiper__nav._prev.btn-reset(type="button" data-swiper-gallery-thumbs-prev)
+                    +sprite('', 21, 42, 'swiper-nav-prev')
+
+                .swiper(data-swiper-gallery-thumbs)
+                    .swiper-wrapper
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-1', 'jpg', 176, 100, 'Screenshots and videos')
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-2', 'jpg', 176, 100, 'Screenshots and videos')
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-3', 'jpg', 176, 100, 'Screenshots and videos')
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-4', 'jpg', 176, 100, 'Screenshots and videos')
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-5', 'jpg', 176, 100, 'Screenshots and videos')
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-6', 'jpg', 176, 100, 'Screenshots and videos')
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-1', 'jpg', 176, 100, 'Screenshots and videos')
+                        .swiper-slide
+                            +picture('gallery__picture-thumb picture', 'gallery/thumb-2', 'jpg', 176, 100, 'Screenshots and videos')
+
+                button.swiper__nav._next.btn-reset(type="button" data-swiper-gallery-thumbs-next)
+                    +sprite('', 21, 42, 'swiper-nav-prev')
+
+    section.together 
+        .content-container
+            .together__header
+                h2.together__title Frequently bought together
+                a.together__more(href="#") Show more
+                    +sprite('', 17, 8, 'more')
+
+            .swiper(data-swiper-together)
+                .swiper-wrapper
+                    .swiper-slide
+                        article.together-item
+                            ul.together-item__labels.list-reset 
+                                li.together-item__label._red
+                                    +sprite('', 12, 12, 'percent')
+                                    | Скидка
+                                li.together-item__label._blue
+                                    +sprite('', 11, 14, 'fire')
+                                    | Хит
+                            +picture('together-item__picture picture', 'together/img-1', 'jpg', 364, 183, 'Onslaught Mode in World of Tanks')
+                            h3.together-item__title Onslaught Mode in World of Tanks
+                            p.together-item__text Onslaught Mode is a new game mode in World of Tanks that challenges players to work together and capture control points on the map
+                            .together-item__deadline
+                                +sprite('', 19, 19, 'clock')
+                                strong Deadline:
+                                | 3-5 days
+                            .together-item__controls
+                                .together-item__price From
+                                    span $1 235.00
+
+                                a.together-item__btn.link._full(href="#")
+                                    +sprite('', 17, 13, 'sorting')
+                                    | Choose options
+
+                    .swiper-slide
+                        article.together-item
+                            ul.together-item__labels.list-reset 
+                                li.together-item__label._red
+                                    +sprite('', 12, 12, 'percent')
+                                    | Скидка
+                                li.together-item__label._blue
+                                    +sprite('', 11, 14, 'fire')
+                                    | Хит
+                            +picture('together-item__picture picture', 'together/img-2', 'jpg', 364, 183, 'Personal missions 2.0')
+                            h3.together-item__title Personal missions 2.0
+                            p.together-item__text In the World of Tanks Personal Missions is a line of special missions broken down into campaigns.
+                            .together-item__deadline
+                                +sprite('', 19, 19, 'clock')
+                                strong Deadline:
+                                | 3-5 days
+                            .together-item__controls
+                                .together-item__price From
+                                    span $34.00
+
+                                a.together-item__btn.link._full(href="#")
+                                    +sprite('', 17, 13, 'sorting')
+                                    | Choose options
+
+                    .swiper-slide
+                        article.together-item
+                            ul.together-item__labels.list-reset 
+                                li.together-item__label._red
+                                    +sprite('', 12, 12, 'percent')
+                                    | Скидка
+                                li.together-item__label._blue
+                                    +sprite('', 11, 14, 'fire')
+                                    | Хит
+                            +picture('together-item__picture picture', 'together/img-3', 'jpg', 364, 183, 'Personal missions 1.0')
+                            h3.together-item__title Personal missions 1.0
+                            p.together-item__text In the World of Tanks Personal Missions is a line of special missions broken down into campaigns.
+                            .together-item__deadline
+                                +sprite('', 19, 19, 'clock')
+                                strong Deadline:
+                                | 3-5 days
+                            .together-item__controls
+                                .together-item__price From
+                                    span $200.00
+
+                                a.together-item__btn.link._full(href="#")
+                                    +sprite('', 17, 13, 'sorting')
+                                    | Choose options
+
+                    .swiper-slide
+                        article.together-item
+                            ul.together-item__labels.list-reset 
+                                li.together-item__label._red
+                                    +sprite('', 12, 12, 'percent')
+                                    | Скидка
+                                li.together-item__label._blue
+                                    +sprite('', 11, 14, 'fire')
+                                    | Хит
+                            +picture('together-item__picture picture', 'together/img-3', 'jpg', 364, 183, 'Marks of Excellence')
+                            h3.together-item__title Marks of Excellence
+                            p.together-item__text Onslaught Mode is a new game mode in World of Tanks that challenges players to work together and capture control points on the map
+                            .together-item__deadline
+                                +sprite('', 19, 19, 'clock')
+                                strong Deadline:
+                                | 3-5 days
+                            .together-item__controls
+                                .together-item__price From
+                                    span $543.00
+
+                                a.together-item__btn.link._full(href="#")
+                                    +sprite('', 17, 13, 'sorting')
+                                    | Choose options
+
+
+            .together__wrap-more
+                a.together__more._mobile(href="#") Show more
+                    +sprite('', 17, 8, 'more')
+
+    section.faq
+        .content-container
+            h2.faq__title FAQ
+            
+            .faq__items(data-accordion-faq)
+                .faq-item.ac
+                    button.faq-item__btn.btn-reset.ac-trigger(type="button") Does the fish swim in the ocean?
+                    .ac-panel
+                        .faq-item__text
+                            p You can level your character only in dungeons, but in this case, you can miss out on a lot of useful unlocks, such as the new Dragonriding system. Also, quest leveling will help you to take the first steps in becoming Renown with Dragonflight factions, which also will be useful in the endgame.
+
+                .faq-item.ac
+                    button.faq-item__btn.btn-reset.ac-trigger(type="button") How to get to Black Rook Hold entrance?
+                    .ac-panel
+                        .faq-item__text
+                            p You can level your character only in dungeons, but in this case, you can miss out on a lot of useful unlocks, such as the new Dragonriding system. Also, quest leveling will help you to take the first steps in becoming Renown with Dragonflight factions, which also will be useful in the endgame.
+                            p You can level your character only in dungeons, but in this case, you can miss out on a lot of useful unlocks, such as the new Dragonriding system. Also, quest leveling will help you to take the first steps in becoming Renown with Dragonflight factions, which also will be useful in the endgame.
+
+                .faq-item.ac
+                    button.faq-item__btn.btn-reset.ac-trigger(type="button") What does wow dragonflight leveling 60-70 look like?
+                    .ac-panel
+                        .faq-item__text.ac-panel
+                            p You can level your character only in dungeons, but in this case, you can miss out on a lot of useful unlocks, such as the new Dragonriding system. Also, quest leveling will help you to take the first steps in becoming Renown with Dragonflight factions, which also will be useful in the endgame.
+
+                      
+                                        
+
