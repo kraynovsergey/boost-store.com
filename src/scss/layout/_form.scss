@@ -10,10 +10,24 @@
         background: #063053;
         transition: .5s ease-in-out;
         outline: none !important;
+    }
 
-        &:focus {
-            border-color: #329bf8;
-            background: #004781;
+    &__input-actions,
+    &__textarea-actions,
+    &__input,
+    &__textarea {
+        &:not(:disabled, ._error) {
+            &:focus {
+                border-color: #329bf8;
+                background: #004781;
+            }
+    
+            &:hover {
+                @include tablet-from {
+                    border-color: #329bf8;
+                    background: #004781;
+                }
+            }
         }
 
         &:disabled {

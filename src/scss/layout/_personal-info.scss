@@ -127,6 +127,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 10px;
+            position: relative;
         }
 
         &-title {
@@ -144,63 +145,12 @@
         }
 
         &-info {
-            position: relative;
-
-            &-icon {
-                min-width: 16px;
-                max-width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                background: linear-gradient(225deg, #30caff 0%, #329bf8 54.17%, #3373f2 100%);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: currentColor;
-
-                & svg {
-                    height: 70%;
-                    width: auto;
-                }
-
-                &:hover {
-                    & + .personal-info__status-info-text {
-                        visibility: visible;
-                        opacity: 1;
-                    }
-                }
+            @include tablet-small-from {
+                position: relative;
             }
 
-            &-text {
-                background: #fff;
-                border-radius: 5px;
-                box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-                position: absolute;
-                top: calc(100% + 15px);
-                left: 0;
-                color: #14273a;
-                width: 210px;
-                padding: clamp-calc(10px, 15px);
-                transition: .5s ease-in-out;
-                visibility: hidden;
-                opacity: 0;
-                z-index: 4;
-
-                @include mobile {
-                    left: unset;
-                    right: 0;
-                }
-
-                & h4 {
-                    font-size: clamp-calc(14px, 20px);
-                    margin: 0 0 10px;
-                    padding: 0;
-                    font-weight: 700;
-                }
-
-                & p {
-                    font-size: clamp-calc(13px, 15px);
-                    margin: 0;
-                }
+            & .info__btn {
+                background: linear-gradient(225deg, #30caff 0%, #329bf8 54.17%, #3373f2 100%);
             }
         }
 

@@ -1,0 +1,159 @@
+extends product
+
+block meta
+    - var seotitle = 'WoT Azure Pegasus Boost'
+
+block content
+    .content-container
+        section.boost-page
+            .product-page__header
+                h1.content__h1.product-page__title WoT Azure Pegasus Boost
+                .product-page__tags
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'ssl')
+                            | SSL защита
+                        .info__text
+                            h4 SSL защита
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'vpn')
+                            | VPN
+                        .info__text
+                            h4 VPN
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'guard')
+                            | Безопасно
+                        .info__text
+                            h4 Безопасно
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'support')
+                            | Поддержка 24/7
+                        .info__text
+                            h4 Поддержка 24/7
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'money')
+                            | Возврат денег
+                        .info__text
+                            h4 Возврат денег
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+            .product-page__content
+                +picture_no_lazy('product-page__content-picture picture', 'product/img', 'png', 695, 450, 'Personal missions 1.0')
+                
+                section.product-page__content-block
+                    h2 The includes:
+                    p Buy WoT Azure Pegasus Event boost and participate in one of <strong class="_red">the most difficult events in the history of the game, reaching Legend</strong> Rank!  Unlock unique event-only rewards, badges, dog-tags, and rarest camouflages for your tank.
+
+                section.product-page__content-block
+                    h2 What you will get
+                    ul
+                        li 
+                            span <strong class="_blue">Legend Azure Pegasus rank reached</strong>
+                        li 
+                            span Various rewards from previous ranks obtained;
+                        li 
+                            span Heavenly Horse 2D Style for your tank on Legend rank, if the rank is kept until the end of the season;
+                        li 
+                            span Days of premium account, bonds, and other additional prizes.
+
+                section.product-page__content-block
+                    h2 Execution speed
+                    p Depending on what execution speed you choose, service can be completed faster.
+                    ul 
+                        li 
+                            span <strong>Normal</strong> - you get a basic place in an Azure Pegasus boost completion queue;
+                        li 
+                            span <strong>Express</strong> - your order receives a higher priority, decreasing completion time by 30%;
+                        li 
+                            span <strong>Extra Express</strong> - your order gets the highest priority, making completion time as quick as possible.
+
+            form.boost-page__calculator.boost(action="#")
+                .boost__content
+                    fieldset.boost__fieldset
+                        h4.boost__title Current rank
+                        select.select(name="rank")
+                            option(value="Silver 1") Silver 1
+                            option(value="Silver 2") Silver 2
+                            option(value="Silver 3") Silver 3
+                            option(value="Silver 4") Silver 4
+
+                    fieldset.boost__fieldset
+                        h4.boost__title Rate
+                        .boost__range-slider(data-range-slider-wrap)
+                            input.boost__range-slider-input(type="text" name="rate_min" data-range-slider-min readonly)
+                            input.boost__range-slider-input(type="text" name="rate_max" data-range-slider-max readonly)
+
+                            .range-slider(data-min="0" data-max="1000" data-step="50" data-value-min="200" data-value-max="600")
+                                input(type="range")
+                                input(type="range")
+                                .range-slider__thumb(data-lower)
+                                .range-slider__thumb(data-upper)
+                                .range-slider__range
+
+                            ul.range-slider__list.list-reset
+                                li s1
+                                li s2
+                                li s3
+                                li s4
+                                li se
+                                li sem
+                                li gn1
+
+                    fieldset.boost__fieldset
+                        h4.boost__title Guardians & speed
+                        .boost__options
+                            .boost__option.option
+                                input.option__input(type="checkbox" name="option1" id="option1")
+                                label.option__label(for="option1")
+                                    span.option__check
+                                    span.option__title Keep the rank
+                                    .label +5$
+                                    +info('boost__info', 'Keep the rank', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+
+                            .boost__option.option
+                                input.option__input(type="checkbox" name="option2" id="option2")
+                                label.option__label(for="option2")
+                                    span.option__check
+                                    span.option__title Stream
+                                    .label +5$
+                                    +info('boost__info', 'Stream', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+
+                            .boost__option.option
+                                input.option__input(type="checkbox" name="option3" id="option3")
+                                label.option__label(for="option3")
+                                    span.option__check
+                                    span.option__title Here are some ways
+                                    .label +5$
+                                    +info('boost__info', 'Here are some ways', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+
+                            .boost__option.option
+                                input.option__input(type="checkbox" name="option4" id="option4")
+                                label.option__label(for="option4")
+                                    span.option__check
+                                    span.option__title Personalized coaching
+                                    .label +5$
+                                    +info('boost__info', 'Personalized coaching', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+
+                .boost__footer
+                    .boost__total.boost__footer-double-row $1 235.00
+                    .boost__bonus.boost__footer-double-row Bonus: + 2,5$
+                        +info('boost__info', 'Bonus', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                    .boost__deadline.boost__footer-double-row
+                        +sprite('', 19, 19, 'clock')
+                        | Deadline: 30 days
+                    button.boost__submit.form__submit.form__submit-red(type="button") 
+                        span Buy it now
+                    button.boost__submit.form__submit.form__submit-bordered(type="submit") 
+                        span Add to basket

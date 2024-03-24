@@ -113,12 +113,7 @@ block main
 
                         .checkout__total-bonus 
                             span <strong>2.5$</strong> will be credited to your account
-                            .checkout__total-bonus-info
-                                button.checkout__total-bonus-info-btn.btn-reset(type="button")
-                                    +sprite('', 2, 11, 'info')
-                                .personal-info__status-info-text
-                                    h4 Timofey Gluxov
-                                    p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+                            +info('checkout__total-bonus-info', 'Timofey Gluxov', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
 
                         button.checkout__total-submit.btn-reset(type="submit") 
                             span Processed checkout

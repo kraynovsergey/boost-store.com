@@ -1,0 +1,9 @@
+.mmr-boost-page {
+    display: grid;
+    gap: 30px;
+    padding-bottom: clamp-calc(40px, 80px);
+
+    &__content {
+        padding-top: clamp-calc(10px, 30px);
+    }
+}

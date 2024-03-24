@@ -1,0 +1,123 @@
+.boost {
+    border-bottom: 5px solid #30caff;
+    border-radius: 7px;
+    box-shadow: -20px 20px 40px 0 rgba(48, 204, 255, 0.3);
+
+    &__content {
+        display: grid;
+        gap: 35px;
+        background: rgba(0, 16, 32, .9);
+        padding: clamp-calc(20px, 50px);
+        border-radius: 7px 7px 0 0;
+    }
+
+    &__fieldset {
+        display: grid;
+        gap: 10px;
+        padding: 0;
+    }
+
+    &__title {
+        font-size: clamp-calc(16px, 18px);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__footer {
+        padding: clamp-calc(20px, 30px) clamp-calc(20px, 50px);
+        border-top: 1px solid #457c96;
+        background: linear-gradient(180deg, rgba(0, 16, 32, .9), #053a70 100%);
+        display: grid;
+        gap: 10px;
+        border-radius: 0 0 7px 7px;
+
+        @include desktop-small-from {
+            grid-template-columns: 1fr 1fr;
+
+            &-double-row {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    &__total {
+        font-size: clamp-calc(35px, 48px);
+        font-weight: 700;
+    }
+
+    &__bonus {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: clamp-calc(16px, 18px);
+        position: relative;
+    }
+
+    &__deadline {
+        display: flex;
+        gap: 10px;
+        font-weight: 700;
+        font-size: clamp-calc(16px, 18px);
+        padding-bottom: 10px;
+    }
+
+    &__submit {
+        padding: 0 10px;
+        height: 60px;
+    }
+
+    &__info {
+        & .info__btn {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    &__options {
+        display: grid;
+        justify-items: start;
+        gap: 10px;
+    }
+
+    &__option {
+        & .info {
+            position: unset;
+        }
+
+        &:hover {
+            @include tablet-from {
+                & .info__btn {
+                    background: #001020;
+                }
+            }
+        }
+    }
+
+    &__range-slider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 10px;
+
+        & .range-slider {
+            margin-top: 20px;
+            grid-column: span 2;
+        }
+
+        & .range-slider__list {
+            grid-column: span 2;
+        }
+
+        &-input {
+            background: #14273a;
+            border-radius: 5px;
+            padding: 0 15px;
+            height: 45px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            border: 0;
+            width: 100%;
+        }
+    }
+}

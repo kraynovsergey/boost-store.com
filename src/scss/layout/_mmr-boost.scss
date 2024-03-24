@@ -1,0 +1,93 @@
+.mmr-boost {
+    display: grid;
+    
+    @include desktop-medium-from {
+        grid-template-columns: 1fr .45fr;
+    }
+
+    &__content {
+        background: #001020;
+        padding: clamp-calc(15px, 50px);
+        display: grid;
+        align-items: start;
+        gap: clamp-calc(40px, 50px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        @include desktop-medium-from {
+            border-radius: 7px 0 0 7px;
+        }
+
+        @include desktop-medium {
+            border-radius: 7px 7px 0 0;
+        }
+    }
+
+    &__footer {
+        display: grid;
+        gap: clamp-calc(20px, 50px);
+        padding: clamp-calc(15px, 50px);
+        background: linear-gradient(180deg, #001020 0%, #053a70 100%);
+
+        @include desktop-medium-from {
+            border-left: 1px solid #457c96;
+            border-radius: 0 7px 7px 0;
+            grid-template-columns: 1fr;
+            align-items: stretch;
+        }
+
+        @include desktop-medium {
+            border-top: 1px solid #457c96;
+            border-radius: 0 0 7px 7px;
+        }
+
+        @include mobile-from {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        &-content {
+            display: grid;
+            gap: clamp-calc(15px, 20px);
+
+            & .boost__deadline {
+                padding-bottom: 0;
+            }
+        }
+
+        &-controls {
+            display: grid;
+            gap: clamp-calc(10px, 20px);
+        }
+    }
+
+    &__content-controls {
+        display: grid;
+        gap: 30px
+    }
+
+    & .range-slider__list li {
+        @include mobile {
+            font-size: 8px;
+        }
+    }
+
+    &__ranks {
+        display: grid;
+        align-items: center;
+        gap: 15px;
+        grid-template-columns: 1fr 21px 1fr;
+
+        @include tablet-small {
+            grid-template-columns: 1fr;
+        }
+
+        &-arrows {
+            width: 100%;
+            height: auto;
+
+            @include tablet-small {
+                display: none;
+            }
+        }
+    }
+}

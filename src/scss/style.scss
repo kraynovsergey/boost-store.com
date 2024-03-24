@@ -7,6 +7,8 @@
 
 /* VENDOR */
 @import "../../node_modules/swiper/swiper-bundle.min.css";
+@import "../../node_modules/nice-select2/dist/css/nice-select2.css";
+@import "../../node_modules/range-slider-input/dist/style.css";
 
 /* COMPONENTS */
 @import "components/_lazy";
@@ -37,3 +39,10 @@
 @import "layout/_together-item.scss";
 @import "layout/_faq.scss";
 @import "layout/_faq-item.scss";
+@import "layout/_boost-page.scss";
+@import "layout/_boost.scss";
+@import "layout/_select.scss";
+@import "layout/_range-slider.scss";
+@import "layout/_mmr-boost-page.scss";
+@import "layout/_mmr-boost.scss";
+@import "layout/_boost-rank.scss";

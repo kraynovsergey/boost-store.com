@@ -1,0 +1,153 @@
+extends product
+
+block meta
+    - var seotitle = 'WoT Azure Pegasus Boost'
+
+block content
+    .content-container
+        .mmr-boost-page
+            .product-page__header
+                h1.content__h1.product-page__title MMR Boosting
+                .product-page__tags
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'ssl')
+                            | SSL защита
+                        .info__text
+                            h4 SSL защита
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'vpn')
+                            | VPN
+                        .info__text
+                            h4 VPN
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'guard')
+                            | Безопасно
+                        .info__text
+                            h4 Безопасно
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'support')
+                            | Поддержка 24/7
+                        .info__text
+                            h4 Поддержка 24/7
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+                    .product-page__tag
+                        button.product-page__tag-btn.btn-reset
+                            +sprite('product__tag-icon', 19, 19, 'money')
+                            | Возврат денег
+                        .info__text
+                            h4 Возврат денег
+                            p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
+
+            form.mmr-boost(action="#")
+                .mmr-boost__content
+                    .mmr-boost__content-controls
+                        .mmr-boost__ranks
+                            section.boost-rank
+                                +picture('boost-rank__picture picture _contain', 'mmr-boost/rank-1', 'png', 110, 86, 'Сurrent rank')
+                                .boost-rank__content
+                                    h3.boost-rank__title Сurrent rank
+                                    select.select.boost-rank__select(name="current_rank")
+                                        option(value="Silver 1") Silver 1
+                                        option(value="Silver 2") Silver 2
+                                        option(value="Silver 3") Silver 3
+                                    input.boost-rank__input.form__input-actions(type="text" name="current_rank_number" value="2563" data-mask-integer)
+                                
+                            img.mmr-boost__ranks-arrows.lazy(data-src="@img/mmr-boost/arrows.svg" alt="" width="21" height="65")
+
+                            section.boost-rank
+                                +picture('boost-rank__picture picture _contain', 'mmr-boost/rank-2', 'png', 110, 86, 'Desired rank')
+                                .boost-rank__content
+                                    h3.boost-rank__title Desired rank
+                                    select.select.boost-rank__select(name="current_rank")
+                                        option(value="Silver 1") Silver 1
+                                        option(value="Silver 2") Silver 2
+                                        option(value="Silver 3") Silver 3
+                                    input.boost-rank__input.form__input-actions(type="text" name="desired_rank_number" value="2563" data-mask-integer)
+                        
+                        .mmr-boost__range-slider
+                            .range-slider(data-min="0" data-max="1000" data-step="5" data-value-min="200" data-value-max="600")
+                                input(type="range")
+                                input(type="range")
+                                .range-slider__thumb(data-lower)
+                                .range-slider__thumb(data-upper)
+                                .range-slider__range
+
+                            ul.range-slider__list.list-reset
+                                li s1
+                                li s2
+                                li s3
+                                li s4
+                                li se
+                                li sem
+                                li gn1
+                                li gn2
+                                li gn3
+                                li gn4
+                                li mg1
+                                li mg2
+                                li mge 
+                                li dmg 
+                                li le 
+                                li lem 
+                                li smfc
+                                li ge
+
+                    .calculator__extra
+                        h3.calculator__extra-title Extra Options
+                        .calculator__extra-items
+                            .option
+                                input.option__input(type="checkbox" name="option1" id="option1")
+                                label.option__label(for="option1")
+                                    span.option__check
+                                    span.option__title Play with booster (Duo/Lobby)
+                            .option
+                                input.option__input(type="checkbox" name="option2" id="option2")
+                                label.option__label(for="option2")
+                                    span.option__check
+                                    span.option__title +1 Win Extra 
+                                    +info('option__info', '+1 Win Extra', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                            .option
+                                input.option__input(type="checkbox" name="option3" id="option3")
+                                label.option__label(for="option3")
+                                    span.option__check
+                                    span.option__title Priority order
+                                    .label +5$
+                            .option
+                                input.option__input(type="checkbox" name="option4" id="option4")
+                                label.option__label(for="option4")
+                                    span.option__check
+                                    span.option__title Live stream
+                                    .label +5$
+                                    +info('option__info', 'Live stream', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+
+                .mmr-boost__footer
+                    .mmr-boost__footer-content
+                        .boost__total $1 235.00
+                        .boost__bonus Bonus: + 2,5$
+                            +info('boost__info', 'Bonus', 'Ive made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!')
+                        .boost__deadline
+                            +sprite('', 19, 19, 'clock')
+                            | Deadline: 30 days
+                    .mmr-boost__footer-controls
+                        button.boost__submit.form__submit.form__submit-red(type="button") 
+                            span Buy it now
+                        button.boost__submit.form__submit.form__submit-bordered(type="submit") 
+                            span Add to basket
+
+            
+            .product-page__content.mmr-boost-page__content
+                section.product-page__content-block
+                    h2 Description:
+                    p Buy Personal Missions 2.0 boost and finish all the missions of the Second Front campaign, obtaining unique tanks: Excalibur, Chimera, and one of the most powerful tanks in the game - <strong class="_red">Object 279(e) Tier X heavy tank</strong>.
+                    p The Second Front campaign is a second set of personal missions with three tanks as rewards. This set is considered to be much more difficult than 1.0, however, it also offers many powerful tanks, including Object 279(e) - <strong class="_blue">one of the best heavy tanks in the game</strong>, with almost impenetrable armor and powerful accurate gun with high DPM. The problem is that in order to unlock it you have to spend not weeks but months of your time, trying to finish several dozens of challenges. Or you can just choose our WoT The Second Front Campaign boost and complete them all with help of professionals!

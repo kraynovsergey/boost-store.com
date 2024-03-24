@@ -38,6 +38,8 @@
   },
   "dependencies": {
     "accordion-js": "^3.3.4",
+    "nice-select2": "^2.1.0",
+    "range-slider-input": "^2.4.4",
     "swiper": "^11.0.7",
     "vanilla-lazyload": "^18.0.0"
   }

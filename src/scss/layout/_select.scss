@@ -1,0 +1,55 @@
+select.select {
+    display: none !important;
+}
+
+.select {
+    background: #14273a;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    border: 1px solid #14273a;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        @include tablet-from {
+            background: #004781;
+            border-color: #30caff;
+        }
+    }
+
+    &.open {
+        background: #004781;
+        border-color: #30caff;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &::after {
+        border-color: #fff;
+        height: 8px;
+        width: 8px;
+        margin-top: -6px;
+        right: 15px;
+    }
+
+    & .nice-select-dropdown {
+        width: calc(100% + 2px);
+        left: -1px;
+        margin-top: 1px;
+        color: #000;
+        font-size: 12px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        & .option {
+            padding-left: 15px;
+
+            &:hover {
+                background: #d0dae0 !important;
+            }
+        }
+    }
+}
