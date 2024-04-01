@@ -1,14 +1,14 @@
+/* VENDOR */
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/nice-select2/src/scss/nice-select2.scss";
+@import "vendors/range-slider-input.scss";
+
 /* CORE */
 @import "core/_variables";
 @import "core/_clamp";
 @import "core/_breakpoints";
 @import "core/_default";
 @import "core/_grid";
-
-/* VENDOR */
-@import "../../node_modules/swiper/swiper-bundle.min.css";
-@import "../../node_modules/nice-select2/dist/css/nice-select2.css";
-@import "../../node_modules/range-slider-input/dist/style.css";
 
 /* COMPONENTS */
 @import "components/_lazy";
