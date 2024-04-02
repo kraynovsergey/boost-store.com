@@ -81,7 +81,7 @@ const lazyLoadInstance = new lazyload_min();
 ;// CONCATENATED MODULE: ./src/js/modules/last-orders.js
 const last_orders_filters = document.querySelectorAll('[data-last-orders-filter]');
 const last_orders = document.querySelectorAll('[data-last-orders-item]');
-if (last_orders_filters.length > 0 && last_orders.length > 0) {
+if (last_orders_filters.length > 0) {
     last_orders_filters.forEach(last_order_filter => {
         last_orders_filters.forEach(last_order_filter => {
             let i = +last_order_filter.getAttribute('data-last-orders-filter'),
