@@ -25,5 +25,33 @@ if (range_sliders.length > 0) {
 
         if (input_min) input_min.value = range_slider_init.value()[0];
         if (input_max) input_max.value = range_slider_init.value()[1];
+
+        if (input_min && input_max) {
+            input_min.addEventListener('keyup', () => {
+                rangeSlider(range_slider, {
+                    min: range_slider.getAttribute('data-min'),
+                    max: range_slider.getAttribute('data-max'),
+                    step: range_slider.getAttribute('data-step'),
+                    value: [input_min.value, input_max.value],
+                    onInput: (value, userIteraction) => {
+                        if (input_min) input_min.value = value[0];
+                        if (input_max) input_max.value = value[1];
+                    }
+                });
+            });
+
+            input_max.addEventListener('keyup', () => {
+                rangeSlider(range_slider, {
+                    min: range_slider.getAttribute('data-min'),
+                    max: range_slider.getAttribute('data-max'),
+                    step: range_slider.getAttribute('data-step'),
+                    value: [input_min.value, input_max.value],
+                    onInput: (value, userIteraction) => {
+                        if (input_min) input_min.value = value[0];
+                        if (input_max) input_max.value = value[1];
+                    }
+                });
+            });
+        }
     });
 }

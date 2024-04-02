@@ -92,8 +92,8 @@ block content
                     fieldset.boost__fieldset
                         h4.boost__title Rate
                         .boost__range-slider(data-range-slider-wrap)
-                            input.boost__range-slider-input(type="text" name="rate_min" data-range-slider-min readonly)
-                            input.boost__range-slider-input(type="text" name="rate_max" data-range-slider-max readonly)
+                            input.boost__range-slider-input(type="text" name="rate_min" data-range-slider-min data-mask-integer)
+                            input.boost__range-slider-input(type="text" name="rate_max" data-range-slider-max data-mask-integer)
 
                             .range-slider(data-min="0" data-max="1000" data-step="50" data-value-min="200" data-value-max="600")
                                 input(type="range")
