@@ -4,6 +4,7 @@ const range_sliders = document.querySelectorAll('.range-slider');
 if (range_sliders.length > 0) {
     range_sliders.forEach(range_slider => {
         let wrap = range_slider.closest('[data-range-slider-wrap]'),
+            max_value = +range_slider.getAttribute('data-max'),
             input_min,
             input_max;
 
@@ -23,11 +24,15 @@ if (range_sliders.length > 0) {
             }
         });
 
-        if (input_min) input_min.value = range_slider_init.value()[0];
-        if (input_max) input_max.value = range_slider_init.value()[1];
-
         if (input_min && input_max) {
+            input_min.value = range_slider_init.value()[0];
+            input_max.value = range_slider_init.value()[1];
+
             input_min.addEventListener('keyup', () => {
+                if ((+input_min.value > max_value) || (+input_min.value >= +input_max.value)) {
+                    input_min.value = 0;
+                }
+
                 rangeSlider(range_slider, {
                     min: range_slider.getAttribute('data-min'),
                     max: range_slider.getAttribute('data-max'),
@@ -41,6 +46,10 @@ if (range_sliders.length > 0) {
             });
 
             input_max.addEventListener('keyup', () => {
+                if (+input_max.value > max_value) {
+                    input_max.value = max_value;
+                }
+
                 rangeSlider(range_slider, {
                     min: range_slider.getAttribute('data-min'),
                     max: range_slider.getAttribute('data-max'),
