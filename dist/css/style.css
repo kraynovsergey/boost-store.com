@@ -2577,6 +2577,10 @@ img.entered.loaded {
   right: clamp(10px, -22px + 0.1 * 100vw, 170px);
 }
 
+.gallery__thumbs .swiper {
+  width: 100%;
+}
+
 .gallery__thumbs .swiper-slide-thumb-active .gallery__picture-thumb {
   border-color: #EC5400;
 }

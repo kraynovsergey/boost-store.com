@@ -31,6 +31,10 @@
             bottom: 0;
         }
 
+        & .swiper {
+            width: 100%;
+        }
+
         & .swiper-slide-thumb-active {
             & .gallery__picture-thumb {
                 border-color: #EC5400;
