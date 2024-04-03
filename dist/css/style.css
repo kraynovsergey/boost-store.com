@@ -3158,6 +3158,56 @@ select.select {
   transition: 0.5s ease-in-out;
 }
 
+.dota {
+  margin-top: calc(clamp(26px, 21.2px + 0.015 * 100vw, 50px) * -1);
+  margin-bottom: clamp(26px, 21.2px + 0.015 * 100vw, 50px);
+  padding: 15px 0;
+  background: #14273A;
+}
+
+.dota__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dota__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(18px, 16.8px + 0.00375 * 100vw, 24px);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dota__title img {
+  min-width: clamp(24px, 20.8px + 0.01 * 100vw, 40px);
+  max-width: clamp(24px, 20.8px + 0.01 * 100vw, 40px);
+  height: auto;
+}
+
+.dota__items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  margin-right: calc(clamp(15px, 8px + 0.021875 * 100vw, 50px) * -1);
+}
+
+.dota__item {
+  height: 40px;
+  padding: 0 clamp(10px, 8px + 0.00625 * 100vw, 20px);
+  background: linear-gradient(180deg, #045fa9 0%, #004781 100%, #004781 100%);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(15px, 14.6px + 0.00125 * 100vw, 17px);
+  white-space: nowrap;
+}
+
 @media (width > 1024px) {
   .swiper__nav:not(:disabled):hover {
     color: #fff;

@@ -4,6 +4,18 @@ block meta
     - var seotitle = 'Personal missions 1.0'
 
 block main
+    .dota
+        .content-container.dota__container
+            .dota__title
+                img(src="@img/product/dota.svg")
+                | Dota 2:
+
+            .dota__items.scrollbar-hidden
+                a.dota__item(href="#") Calibration
+                a.dota__item(href="#") Events
+                a.dota__item(href="#") Low priority
+                a.dota__item(href="#") MMR
+
     block content
         .content-container
             section.product-page
