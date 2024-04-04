@@ -37,6 +37,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.35",
     "accordion-js": "^3.3.4",
     "nice-select2": "^2.1.0",
     "range-slider-input": "^2.4.4",

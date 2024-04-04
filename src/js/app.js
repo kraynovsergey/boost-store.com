@@ -6,3 +6,4 @@ import "./modules/accordion.js";
 import "./modules/select.js";
 import "./modules/range-slider.js";
 import "./modules/mask-integer.js";
+import "./modules/fancybox.js";

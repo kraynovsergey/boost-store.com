@@ -177,7 +177,10 @@ block main
                     .swiper-slide
                         +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
                     .swiper-slide
-                        +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                        a.gallery__video(href="https://www.youtube.com/watch?v=jPOCxzGCY6g" data-fancybox)
+                            +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
+                            span.gallery__play._small
+                                +sprite('', 11, 14, 'play')
                     .swiper-slide
                         +picture('picture', 'gallery/img', 'jpg', 1618, 763, 'Screenshots and videos')
                     .swiper-slide
@@ -200,7 +203,10 @@ block main
                         .swiper-slide
                             +picture('gallery__picture-thumb picture', 'gallery/thumb-2', 'jpg', 176, 100, 'Screenshots and videos')
                         .swiper-slide
-                            +picture('gallery__picture-thumb picture', 'gallery/thumb-3', 'jpg', 176, 100, 'Screenshots and videos')
+                            .gallery__video
+                                +picture('gallery__picture-thumb picture', 'gallery/thumb-3', 'jpg', 176, 100, 'Screenshots and videos')
+                                span.gallery__play
+                                    +sprite('', 11, 14, 'play')
                         .swiper-slide
                             +picture('gallery__picture-thumb picture', 'gallery/thumb-4', 'jpg', 176, 100, 'Screenshots and videos')
                         .swiper-slide
