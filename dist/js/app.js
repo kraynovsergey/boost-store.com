@@ -125,6 +125,7 @@ if (last_orders_filters.length > 0) {
 ;// CONCATENATED MODULE: ./src/js/modules/calculator.js
 const calculator_btns = document.querySelectorAll('[data-calculator-header-btn]');
 const calculator_chooses = document.querySelectorAll('[data-calculator-choose]');
+const calculator_pictures = document.querySelectorAll('[data-picture-item]');
 
 if (calculator_btns.length > 0 && calculator_chooses.length > 0) {
     calculator_btns.forEach(btn => {
@@ -142,6 +143,14 @@ if (calculator_btns.length > 0 && calculator_chooses.length > 0) {
 
                 calculator_chooses.forEach(item => {
                     if (+item.getAttribute('data-calculator-choose') === i) {
+                        item.classList.add('_active');
+                    } else {
+                        item.classList.remove('_active');
+                    }
+                });
+
+                calculator_pictures.forEach(item => {
+                    if (+item.getAttribute('data-picture-item') === i) {
                         item.classList.add('_active');
                     } else {
                         item.classList.remove('_active');

@@ -114,6 +114,14 @@
                 }
             }
         }
+
+        &-picture-wrap {
+            display: none;
+
+            &._active {
+                display: flex;
+            }
+        }
     }
 
     &__calculator {

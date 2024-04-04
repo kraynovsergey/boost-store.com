@@ -63,8 +63,15 @@ block main
                                 p I've made an order and it said that it would take 3 days to complete. The booster finished in a little more than half an hour. They gave me a 10% discount on a next order afterwards, and I asked them that the same booster would be able to pick up this order for me. Overgear provides absolutely a top tier, and cheap, service!
 
                 .product-page__content
-                    +picture_no_lazy('product-page__content-picture picture', 'product/img', 'png', 695, 450, 'Personal missions 1.0')
-                    
+                    .product-page__content-picture-wrap._active(data-picture-item="1")
+                        +picture_no_lazy('product-page__content-picture picture', 'product/img', 'png', 695, 450, 'Personal missions 1.0')
+                    .product-page__content-picture-wrap(data-picture-item="2")
+                        +picture_no_lazy('product-page__content-picture picture', 'product/img-2', 'png', 695, 450, 'Personal missions 1.0')
+                    .product-page__content-picture-wrap(data-picture-item="3")
+                        +picture_no_lazy('product-page__content-picture picture', 'product/img-3', 'png', 695, 450, 'Personal missions 1.0')
+                    .product-page__content-picture-wrap(data-picture-item="4")
+                        +picture_no_lazy('product-page__content-picture picture', 'product/img-4', 'png', 695, 450, 'Personal missions 1.0')
+
                     section.product-page__content-block
                         h2 The includes:
                         p Buy WoT Azure Pegasus Event boost and participate in one of <strong class="_red">the most difficult events in the history of the game, reaching Legend</strong> Rank!  Unlock unique event-only rewards, badges, dog-tags, and rarest camouflages for your tank.
