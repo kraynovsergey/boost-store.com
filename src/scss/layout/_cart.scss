@@ -41,6 +41,7 @@
         grid-template-columns: clamp-calc(60px, 140px) 1fr;
         gap: clamp-calc(15px, 20px);
         align-items: center;
+        position: relative;
 
         @include mobile {
             grid-column: span 2;

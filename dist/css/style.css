@@ -3080,6 +3080,7 @@ img.entered.loaded {
   grid-template-columns: clamp(60px, 44px + 0.05 * 100vw, 140px) 1fr;
   gap: clamp(15px, 14px + 0.003125 * 100vw, 20px);
   align-items: center;
+  position: relative;
 }
 
 .cart-item__picture {
