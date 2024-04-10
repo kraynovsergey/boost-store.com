@@ -13,15 +13,52 @@
 
     &__blocks {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
 
-        @include tablet {
-            grid-template-columns: 1fr 1fr;
-        }
+        &:not(._auth) {
+            grid-template-columns: 1fr 1fr 1fr;
 
-        @include mobile {
-            grid-template-columns: 1fr !important;
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+            }
+    
+            @include mobile {
+                grid-template-columns: 1fr !important;
+            }
+
+            & .checkout__coupon {
+                @include tablet {
+                    grid-column: span 2;
+                }
+        
+                @include mobile {
+                    grid-column: span 1 !important;
+                }
+            }
+
+            & .checkout__payment {
+                grid-column: span 3;
+        
+                @include tablet {
+                    grid-column: span 2;
+                }
+        
+                @include mobile {
+                    grid-column: span 1 !important;
+                }
+            }
+
+            & .checkout__form {
+                grid-column: span 3;
+        
+                @include tablet {
+                    grid-column: span 2;
+                }
+        
+                @include mobile {
+                    grid-column: span 1 !important;
+                }
+            }
         }
     }
 
@@ -62,29 +99,10 @@
         gap: clamp-calc(15px, 20px);
     }
 
-    &__coupon {
-        @include tablet {
-            grid-column: span 2;
-        }
-
-        @include mobile {
-            grid-column: span 1 !important;
-        }
-    }
-
     &__payment {
-        grid-column: span 3;
         flex-direction: row;
         gap: clamp-calc(20px, 50px);
         align-items: center;
-
-        @include tablet {
-            grid-column: span 2;
-        }
-
-        @include mobile {
-            grid-column: span 1 !important;
-        }
 
         &-picture {
             cursor: pointer;
@@ -93,18 +111,9 @@
     }
 
     &__form {
-        grid-column: span 3;
         display: flex;
         flex-direction: column;
         gap: clamp-calc(40px, 50px);
-
-        @include tablet {
-            grid-column: span 2;
-        }
-
-        @include mobile {
-            grid-column: span 1 !important;
-        }
 
         &-grid {
             display: grid;
