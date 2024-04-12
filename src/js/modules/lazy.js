@@ -1,4 +1,3 @@
 import LazyLoad from "vanilla-lazyload";
 
-/* Lazy */
-const lazyLoadInstance = new LazyLoad();
+export const lazyLoadInstance = new LazyLoad();

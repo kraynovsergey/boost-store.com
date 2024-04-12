@@ -76,7 +76,6 @@ var lazyload_min = __webpack_require__(144);
 ;// CONCATENATED MODULE: ./src/js/modules/lazy.js
 
 
-/* Lazy */
 const lazyLoadInstance = new lazyload_min();
 ;// CONCATENATED MODULE: ./src/js/modules/last-orders.js
 const last_orders_filters = document.querySelectorAll('[data-last-orders-filter]');
