@@ -2001,7 +2001,6 @@ html.with-fancybox body.hide-scrollbar {
 /* CORE */
 
 .content {
-  font-family: "Roboto";
   font-weight: normal;
   font-style: normal;
   font-size: clamp(14px, 13.2px + 0.0025 * 100vw, 18px);
