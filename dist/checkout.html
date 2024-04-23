@@ -119,9 +119,24 @@
               </section>
               <section class="checkout__block checkout__payment">
                 <h3 class="checkout__title">Choose a payment method</h3>
-                    <picture class="checkout__payment-picture picture">
-                      <source type="image/webp" data-srcset="img/checkout/paypal.webp 1x, img/checkout/paypal@2x.webp 2x"><img class="lazy" data-srcset="img/checkout/paypal.png 1x, img/checkout/paypal@2x.png 2x" width="127" height="100">
-                    </picture>
+                <div class="checkout__payment-items">
+                  <div class="checkout__payment-item">
+                    <input class="checkout__payment-input" type="radio" name="payment" value="" id="payment-1" checked>
+                    <label class="checkout__payment-label" for="payment-1">
+                          <picture class="checkout__payment-picture picture _radius">
+                            <source type="image/webp" data-srcset="img/checkout/paypal.webp 1x, img/checkout/paypal@2x.webp 2x"><img class="lazy" data-srcset="img/checkout/paypal.jpg 1x, img/checkout/paypal@2x.jpg 2x" width="127" height="100">
+                          </picture>
+                    </label>
+                  </div>
+                  <div class="checkout__payment-item">
+                    <input class="checkout__payment-input" type="radio" name="payment" value="" id="payment-2">
+                    <label class="checkout__payment-label" for="payment-2">
+                          <picture class="checkout__payment-picture picture _radius">
+                            <source type="image/webp" data-srcset="img/checkout/paypal.webp 1x, img/checkout/paypal@2x.webp 2x"><img class="lazy" data-srcset="img/checkout/paypal.jpg 1x, img/checkout/paypal@2x.jpg 2x" width="127" height="100">
+                          </picture>
+                    </label>
+                  </div>
+                </div>
               </section>
               <form class="checkout__form">
                 <div class="checkout__block">

@@ -73,7 +73,16 @@ block main
 
                 section.checkout__block.checkout__payment
                     h3.checkout__title Choose a payment method
-                    +picture('checkout__payment-picture picture', 'checkout/paypal', 'png', 127, 100)
+                    .checkout__payment-items
+                        .checkout__payment-item
+                            input.checkout__payment-input(type="radio" name="payment" value="" id="payment-1" checked)
+                            label.checkout__payment-label(for="payment-1")
+                                +picture('checkout__payment-picture picture _radius', 'checkout/paypal', 'jpg', 127, 100)
+
+                        .checkout__payment-item
+                            input.checkout__payment-input(type="radio" name="payment" value="" id="payment-2")
+                            label.checkout__payment-label(for="payment-2")
+                                +picture('checkout__payment-picture picture _radius', 'checkout/paypal', 'jpg', 127, 100)
 
                 form.checkout__form
                     .checkout__block
