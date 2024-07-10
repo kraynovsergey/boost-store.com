@@ -3,6 +3,7 @@ package-lock.json
 .htaccess
 .vscode
 robots.txt
+/dist
 
 # General
 .DS_Store
